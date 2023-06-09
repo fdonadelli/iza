@@ -9,13 +9,13 @@ import { TypeOrmUser } from '../../infra/persistence/typeorm/entity/type-orm-use
     TypeOrmModule.forRoot({
       name: 'default',
       type: 'postgres',
-      host: 'localhost',
+      host: 'db',
       port: 5432,
       username: 'user',
       password: 'pass',
       database: 'iza_challange',
       logging: DatabaseConfig.DB_LOG_ENABLE ? 'all' : false,
-
+      synchronize: true,
       entities: [TypeOrmUser],
     }),
     UserModule,
