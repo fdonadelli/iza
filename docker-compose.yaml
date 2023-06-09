@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: iza_challange
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+    restart: always
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - '3003:3003'
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USERNAME: user
+      DB_PASSWORD: pass
+      DB_NAME: iza_challange

@@ -1,0 +1,12 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "user",
+  "password": "pass",
+  "database": "iza_challange",
+  "migrations": ["src/v1/users/infra/persistence/typeorm/migration/*.ts"],
+  "cli": {
+    "migrationsDir": "rc/v1/users/infra/persistence/typeorm/migration"
+  }
+}
