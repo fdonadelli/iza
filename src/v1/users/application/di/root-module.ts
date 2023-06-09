@@ -9,7 +9,7 @@ import { TypeOrmUser } from '../../infra/persistence/typeorm/entity/type-orm-use
     TypeOrmModule.forRoot({
       name: 'default',
       type: 'postgres',
-      host: 'localhost',
+      host: process.env.DB_HOST,
       port: 5432,
       username: 'user',
       password: 'pass',
