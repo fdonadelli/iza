@@ -10,54 +10,5 @@ Gostaria de frisar que a estrutura foi desenhada pensando em isolar a regra de n
 Para iniciar o projeto basta ter o Docker instalado junto ao docker compose e executar o comando docker compose up.
 
 Estrutura do Banco:
-╔══════════════╗       
-║    Customer        
-╠══════════════╣
-║ customer_id  
-║ name         
-║ email        
-║ password     
-╚══════════════╝
-       1
-       ║
-       ║
-       ║
-       N  
-╔════════════╗       
-║ Product         
-╠════════════╣
-║ product_id 
-║ customer_id
-║ name       
-║ price      
-║ description
-║ photo      
-╚════════════╝
-
-
-╔══════════════╗       
-║    Customer         
-╠══════════════╣       
-║ customer_id   
-║ name         
-║ email               
-║ password             
-║                     
-║                      
-╚══════════════╝       
-       1
-       ║
-       ║
-       ║
-       1  
-╔══════════════╗
-║   Address    
-╠══════════════╣
-║ address_id   
-║ customer_id  
-║ zipcode      
-║ state        
-║ city         
-║ street       
-╚══════════════╝
+https://drive.google.com/file/d/1IebmpPmO-YQuN2SZt1VkDIm5rZIazRhy/view?usp=sharing
 
