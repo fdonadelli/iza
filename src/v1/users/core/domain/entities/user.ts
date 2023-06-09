@@ -31,10 +31,11 @@ export class User extends Entity<string> {
     super();
     this.name = payload.name;
     this.email = payload.email;
+    this.password = payload.password;
 
     this.id = payload.id || v4();
     this.createdAt = payload.createdAt || new Date();
-    this.editedAt = payload.editedAt || null;
+    this.editedAt = payload.editedAt || new Date();
   }
 
   public getName(): string {

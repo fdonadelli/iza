@@ -20,6 +20,6 @@ export class TypeOrmUser {
   @Column()
   public editedAt: Date;
 
-  @Column()
-  public removedAt: Date;
+  @Column({ nullable: true })
+  public removedAt?: Date;
 }
