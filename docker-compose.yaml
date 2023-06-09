@@ -20,7 +20,7 @@ services:
       - .:/usr/app
       - /usr/app/node_modules
     ports:
-      - '3003:3003'
+      - '3004:3004'
     depends_on:
       - db
     environment:
